@@ -11,10 +11,36 @@
     <meta name="color-scheme" content="only dark"/>
     <style>
         :root {
+            --background: #121212;
+            --alert-bkg: #454545;
             font-family: 'B612', sans-serif;
+            background-color: var(--background);
         }
         .mono {
             font-family: 'B612 Mono', monospace;
+        }
+        .dashboard {
+            display: inline-flex;
+        }
+        .indicator {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 3.2em;
+            width: 25ex;
+            padding: 0.1em;
+            line-height: 1.05em;
+            text-align: center;
+            text-transform: uppercase;
+            text-overflow: clip;
+            background-color: var(--alert-bkg);
+            color: var(--background);
+            border-width: 0.5em;
+            border-style: solid;
+        }
+        .indicator:first-of-type, .indicator:last-of-type{
+            border-left: 0;
+            border-right: 0;
         }
     </style>
 </head>
@@ -22,5 +48,16 @@
     <h1>WebAnnunciator</h1>
     <p><q>An old-fashioned alarm awareness dashboard in your browser</q></p>
     <p>Currently work in progress.</p>
+    <div class="dashboard">
+        <div class="indicator mono">
+            This is a placeholder<br>#2<br>#3
+        </div>
+        <div class="indicator mono">
+            This is a placeholder<br>#3
+        </div>
+        <div class="indicator mono">
+            This is a placeholder
+        </div>
+    </div>
 </body>
 </html>
