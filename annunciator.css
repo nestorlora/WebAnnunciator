@@ -1,6 +1,12 @@
 :root {
     --background: #121212;
     --alert-bkg: #454545;
+    --light: #dddddd;
+    --critical: #ff00ff;
+    --danger: #ff0018;
+    --caution: #ffe700;
+    --ok: #18ff00;
+    --indication: #00ffe7;
     font-family: 'B612', sans-serif;
     background-color: var(--background);
 }
@@ -24,7 +30,6 @@
     text-align: center;
     text-transform: uppercase;
     text-overflow: clip;
-    background-color: var(--alert-bkg);
     color: var(--background);
     border-width: 0.5em;
     border-style: solid;
@@ -34,4 +39,37 @@
 .indicator:last-of-type {
     border-left: 0;
     border-right: 0;
+}
+
+.sts-off {
+    background-color: var(--alert-bkg);
+}
+
+.sts-critical {
+    background-color: var(--critical);
+}
+
+.sts-danger {
+    background-color: var(--danger);
+}
+
+.sts-caution {
+    background-color: var(--caution);
+}
+
+.sts-indication {
+    background-color: var(--indication);
+}
+
+.sts-ok {
+    background-color: var(--ok);
+}
+
+.sts-info {
+    background-color: var(--light);
+}
+
+.sts-locked {
+    color: var(--light);
+    background: repeating-linear-gradient(45deg, var(--background), var(--background) 6px, var(--alert-bkg) 6px, var(--alert-bkg) 18px);
 }
