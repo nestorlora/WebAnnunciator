@@ -1,0 +1,37 @@
+:root {
+    --background: #121212;
+    --alert-bkg: #454545;
+    font-family: 'B612', sans-serif;
+    background-color: var(--background);
+}
+
+.mono {
+    font-family: 'B612 Mono', monospace;
+}
+
+.dashboard {
+    display: inline-flex;
+}
+
+.indicator {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 3.2em;
+    width: 25ex;
+    padding: 0.1em;
+    line-height: 1.05em;
+    text-align: center;
+    text-transform: uppercase;
+    text-overflow: clip;
+    background-color: var(--alert-bkg);
+    color: var(--background);
+    border-width: 0.5em;
+    border-style: solid;
+}
+
+.indicator:first-of-type,
+.indicator:last-of-type {
+    border-left: 0;
+    border-right: 0;
+}
