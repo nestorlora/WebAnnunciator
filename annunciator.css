@@ -35,23 +35,23 @@
     text-transform: uppercase;
     text-overflow: clip;
     color: var(--background);
-    border-top: 0.25em;
-    border-bottom: 0.25em;
-    border-style: solid;
-    border-color: var(--background);
+    border: 0.2em solid var(--background) ;
 }
 
-.indicator:first-of-type() {
-    border-left: 0;
+.button {
+    border-radius: 1em;
 }
 
-.indicator:nth-of-type() {
-    border-left: 0.25em;
-    border-right: 0.25em;
+a.button {
+    text-decoration: none;
 }
 
-.indicator:first-of-type() {
-    border-right: 0;
+.indicator.button{
+    text-transform: none;
+    color: var(--light);
+    background-color: var(--background);
+    border-color: var(--light);
+    font-weight: 600;
 }
 
 .sts-off {
