@@ -1,7 +1,7 @@
 :root {
-    --background: #121212;
-    --alert-bkg: #454545;
-    --light: #dddddd;
+    --background: #1A1C23;
+    --alert-bkg: #44475a;
+    --light: #eeeeee;
     --critical: #ff00ff;
     --danger: #ff0018;
     --caution: #ffe700;
@@ -9,10 +9,12 @@
     --indication: #00ffe7;
     font-family: 'B612', sans-serif;
     background-color: var(--background);
+    padding: 1% 2%;
 }
 
 .mono {
     font-family: 'B612 Mono', monospace;
+    font-weight: 600;
 }
 
 .dashboard {
