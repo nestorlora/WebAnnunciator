@@ -86,3 +86,22 @@ a.button {
     color: var(--light);
     background: repeating-linear-gradient(45deg, var(--background), var(--background) 6px, var(--alert-bkg) 6px, var(--alert-bkg) 18px);
 }
+
+@keyframes blinking {
+    0%,
+    100% {
+
+    }
+    50% {
+        background-color: var(--alert-bkg);
+    }
+}
+
+.blink{
+    animation: blinkink 0.25s steps(1, start) infinite both;
+    animation-name: blinking;
+    /*animation-duration: 0.5s;*/
+    /*animation-delay: 1s;*/
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
