@@ -17,6 +17,8 @@
 
 .dashboard {
     display: inline-flex;
+    max-width: 100%;
+    flex-wrap: wrap;
 }
 
 .indicator {
