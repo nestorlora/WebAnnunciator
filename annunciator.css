@@ -33,13 +33,22 @@
     text-transform: uppercase;
     text-overflow: clip;
     color: var(--background);
-    border-width: 0.5em;
+    border-top: 0.25em;
+    border-bottom: 0.25em;
     border-style: solid;
+    border-color: var(--background);
 }
 
-.indicator:first-of-type,
-.indicator:last-of-type {
+.indicator:first-of-type() {
     border-left: 0;
+}
+
+.indicator:nth-of-type() {
+    border-left: 0.25em;
+    border-right: 0.25em;
+}
+
+.indicator:first-of-type() {
     border-right: 0;
 }
 
