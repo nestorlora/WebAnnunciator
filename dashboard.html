@@ -7,6 +7,7 @@
     <title>Web Annunciator Demo</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel="stylesheet" href="./annunciator.css">
+    <script type="text/javascript" src="annunciator.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=B612+Mono:wght@400;700&family=B612:wght@400;700&display=swap"
@@ -18,61 +19,53 @@
     <h1>Awesome control room name</h1>
     <hr>
 
-    <h2>Dashboard #1</h2>
+    <h2>IT Department</h2>
     <div class="dashboard">
-        <div class="indicator mono sts-critical">
-            Critical alarm
-        </div>
-        <div class="indicator mono sts-danger">
-            Danger alarm
-        </div>
-        <div class="indicator mono sts-caution">
-            Caution alarm
-        </div>
-        <div class="indicator mono sts-indication">
-            Indication alarm
-        </div>
-        <div class="indicator mono sts-info">
-            Information alarm
-        </div>
-        <div class="indicator mono sts-ok">
-            OK indicator
-        </div>
-        <div class="indicator mono sts-off">
-            This alarm is off
-        </div>
-        <div class="indicator mono sts-locked">
-            This alarm is locked
-        </div>
+        
+        <div id="ind-a-1" class="indicator mono sts-critical">Server room<br>fire alarm</div>
+        <div id="ind-a-2" class="indicator mono sts-caution">Server room<br>door open</div>
+        <div id="ind-a-3" class="indicator mono sts-danger">Server room HVAC fail</div>
+        <div id="ind-a-4" class="indicator mono sts-locked">SR Temp probe<br>unavailable</div>
+        <div id="ind-a-5" class="indicator mono sts-critical">Network room<br>fire alarm</div>
+        <div id="ind-a-6" class="indicator mono sts-caution">Network room<br>door open</div>
+        <div id="ind-a-7" class="indicator mono sts-ok">Network room HVAC healthy</div>
+        <div id="ind-a-8" class="indicator mono sts-locked">NR Temp probe<br>unavailable</div>
+
+        <div class="separator"></div>
+
+        <div id="ind-b-1" class="indicator mono sts-caution sts-off">Blade 1<br>incidents</div>
+        <div id="ind-b-2" class="indicator mono sts-caution">Blade 2<br>incidents</div>
+        <div id="ind-b-3" class="indicator mono sts-danger">Blade server<br>offline</div>
+        <div id="ind-b-4" class="indicator mono sts-caution sts-off">Blade server<br>low storage</div>
+        <div id="ind-b-5" class="indicator mono sts-caution sts-off">Backup server<br>low storage</div>
+        
+        <div class="separator"></div>
+        
+        <div id="ind-c-1"class="indicator mono sts-indication">Low coffee level</div>
+        <div id="ind-c-2"class="indicator mono sts-info">Fire drill<br>in progress</div>
     </div>
 
-    <h2>Dashboard #2</h2>
+    <h2>Studio 1</h2>
     <div class="dashboard">
-        <div class="indicator mono sts-critical">
-            Critical alarm
-        </div>
-        <div class="indicator mono sts-danger">
-            Danger alarm
-        </div>
-        <div class="indicator mono sts-caution">
-            Caution alarm
-        </div>
-        <div class="indicator mono sts-indication">
-            Indication alarm
-        </div>
-        <div class="indicator mono sts-info">
-            Information alarm
-        </div>
-        <div class="indicator mono sts-ok">
-            OK indicator
-        </div>
-        <div class="indicator mono sts-off">
-            This alarm is off
-        </div>
-        <div class="indicator mono sts-locked">
-            This alarm is locked
-        </div>
+        
+        <div id="ind-d-1" class="indicator mono sts-ok">On air</div>
+        <div id="ind-d-2" class="indicator mono sts-danger">Sreamming down</div>
+        <div id="ind-d-3" class="indicator mono sts-indication">Using backup uplink</div>
+        <div id="ind-d-4" class="indicator mono sts-danger">Media storage unavailable</div>
+        <div id="ind-d-5" class="indicator mono sts-danger">Media encoder unavailable</div>
+
     </div>
+
+    <script>
+        indicator_on("ind-a-1", true);
+        indicator_on("ind-a-2", true);
+        indicator_on("ind-a-3", false);
+        indicator_off("ind-a-5", false);
+        indicator_off("ind-a-6", true);
+        indicator_off("ind-c-1", false);
+        indicator_on("ind-d-2", true);
+        indicator_on("ind-d-5", true);
+    </script>
 
 </body>
 
