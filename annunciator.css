@@ -62,7 +62,7 @@ a.button {
 }
 
 .sts-off {
-    background-color: var(--alert-bkg);
+    background-color: var(--alert-bkg) !important;
 }
 
 .sts-critical {
